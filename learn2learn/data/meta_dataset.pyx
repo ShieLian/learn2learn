@@ -91,7 +91,7 @@ class MetaDataset(Dataset):
             for idx, label in indices_to_labels.items():
                 self.labels_to_indices[label].append(idx)
             self.indices_to_labels = indices_to_labels
-            self.labels = labels_to_indices.keys()
+            self.labels = self.labels_to_indices.keys()
         else:  # Create from scratch
             labels_to_indices = defaultdict(list)
             indices_to_labels = defaultdict(int)
